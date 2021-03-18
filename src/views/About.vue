@@ -24,7 +24,10 @@ export default {
   name: 'Board',
   methods: {
     insertTicTac (id) {
-      console.log(id)
+      if (this.$store.state.position[id].el === '') {
+        console.log(id)
+        this.$store.commit('insertTicTac', { id, value: this.$store.state.xo })
+      }
     }
   }
 }
