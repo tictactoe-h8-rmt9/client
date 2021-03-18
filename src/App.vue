@@ -29,4 +29,9 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+h1,h2,h3,h4,h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight : 800;
+}
 </style>
