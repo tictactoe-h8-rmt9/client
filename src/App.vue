@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/play">Play</router-link>
     </div>
     <router-view/>
   </div>
@@ -31,7 +31,11 @@
 }
 
 h1,h2,h3,h4,h5 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight : 800;
+}
+
+body {
+  background-color: #e4e3c6;
 }
 </style>
