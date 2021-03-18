@@ -52,7 +52,7 @@ export default {
 <style>
   .block-play{
     height: 120px;
-    border : 2px solid #000000;
+    border : 2px solid #fff;
     cursor: pointer;
   }
   .block-play > h1{
