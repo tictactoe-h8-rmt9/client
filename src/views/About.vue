@@ -26,7 +26,8 @@ export default {
     insertTicTac (id) {
       if (this.$store.state.position[id].el === '') {
         console.log(id)
-        this.$store.commit('insertTicTac', { id, value: this.$store.state.xo })
+        this.$socket.emit('updateBoard', id)
+        // this.$store.commit('insertTicTac', { id, value: this.$store.state.xo })
       }
     }
   }
