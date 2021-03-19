@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    xo: 'O',
+    myName: '',
+    pemain: {},
     position: [
       {
         el: ''
@@ -37,6 +38,12 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
+    insertName (state, data) {
+      state.myName = data
+    },
+    fetchPemain (state, data) {
+      state.pemain = data
+    },
     insertTicTac (state, { id, value }) {
       state.position[id].el = value
     },
@@ -47,6 +54,9 @@ export default new Vuex.Store({
   actions: {
     SOCKET_fetchDataBoard (context, data) {
       context.commit('fetchData', data)
+    },
+    SOCKET_fetchPemain (context, data) {
+      context.commit('fetchPemain', data)
     }
   },
   modules: {
