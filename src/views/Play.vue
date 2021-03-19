@@ -2,7 +2,7 @@
   <section>
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <div class="row">
             <div class="col-4 block-play" @click="insertTicTac(0)" @click.prevent="playSound('http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3')" ><h1>{{$store.state.position[0].el}}</h1></div>
             <div class="col-4 block-play" @click="insertTicTac(1)" @click.prevent="playSound('http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3')" ><h1>{{$store.state.position[1].el}}</h1></div>

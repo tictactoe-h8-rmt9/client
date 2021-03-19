@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    xo: 'O',
+    myName: 'asd',
     position: [
       {
         el: ''
@@ -37,6 +37,9 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
+    insertName (state, data) {
+      state.myName = data
+    },
     insertTicTac (state, { id, value }) {
       state.position[id].el = value
     },
