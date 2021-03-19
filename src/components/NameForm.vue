@@ -2,8 +2,10 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <br>
-    <input class='form' type="text" placeholder="enter your name" id="name" name="name" required>
-    <button type="submit" id="btn-name">OK</button>
+    <form action="" @submit.prevent="enter">
+      <input class='form' type="text" placeholder="enter your name" id="name" name="name" required v-model="name">
+      <button type="submit" id="btn-name">OK</button>
+    </form>
   </div>
 </template>
 
@@ -12,6 +14,19 @@ export default {
   name: 'NameForm',
   props: {
     msg: String
+  },
+  data () {
+    return {
+      name: ''
+    }
+  },
+  methods: {
+    enter () {
+      const data = {
+        name: this.name
+      }
+      this.$store.dispatch('enter', data)
+    }
   }
 }
 </script>
