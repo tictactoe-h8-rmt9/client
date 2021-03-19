@@ -19,13 +19,5 @@ export default {
 </script>
 
 <style>
-  .block-play{
-    height: 120px;
-    border : 3px solid #fff;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  .block-play > h1{
-    font-size: 72px
-  }
+
 </style>
