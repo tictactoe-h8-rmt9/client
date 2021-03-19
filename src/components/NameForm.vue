@@ -23,6 +23,7 @@ export default {
   methods: {
     onDaftar () {
       console.log(this.name)
+      this.$store.commit('insertName', this.name)
       this.$socket.emit('daftar', this.name)
       this.$router.push('play')
     }
