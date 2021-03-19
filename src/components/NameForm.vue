@@ -2,16 +2,30 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <br>
-    <input class='form' type="text" placeholder="enter your name" id="name" name="name" required>
+    <form @submit.prevent="onDaftar">
+    <input class='form' type="text" placeholder="enter your name" id="name" v-model="name" required>
     <button type="submit" id="btn-name">OK</button>
+    </form>
   </div>
 </template>
 
 <script>
 export default {
   name: 'NameForm',
+  data () {
+    return {
+      name: ''
+    }
+  },
   props: {
     msg: String
+  },
+  methods: {
+    onDaftar () {
+      console.log(this.name)
+      this.$socket.emit('daftar', this.name)
+      this.$router.push('play')
+    }
   }
 }
 </script>
